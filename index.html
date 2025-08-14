@@ -1,94 +1,113 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>عبدالله حمود العنزي - أبو سند</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-  <style>
-    body {
-      font-family: Tahoma, sans-serif;
-      background-color: #fff;
-      color: #5a3921;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      margin: 0;
-      padding: 20px;
-    }
-    .card {
-      background: #fff;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      text-align: center;
-      padding: 30px;
-      max-width: 400px;
-      width: 100%;
-    }
-    img.profile {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #c49a6c;
-    }
-    h1 {
-      margin: 15px 0 5px;
-      font-size: 1.2rem;
-    }
-    p.subtitle {
-      margin: 0 0 20px;
-      color: #7a5b43;
-      font-size: 1rem;
-    }
-    .social-icons {
-      margin: 15px 0;
-    }
-    .social-icons a {
-      display: inline-block;
-      margin: 0 8px;
-      font-size: 1.5rem;
-      color: #5a3921;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-    .social-icons a:hover {
-      color: #c49a6c;
-    }
-    .logo {
-      margin-top: 30px;
-    }
-    .logo svg {
-      width: 60px;
-      height: 60px;
-    }
-    .handle {
-      font-size: 0.9rem;
-      color: #5a3921;
-      margin-top: 5px;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>عبدالله حمود العنزي  </title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+<style>
+  :root{
+    --brand:#5a3921;
+    --brand-2:#c49a6c;
+  }
+  /* خلفية بسيطة */
+  body{
+    margin:0;
+    font-family: Tahoma, system-ui, sans-serif;
+    background:#fff;
+    color:var(--brand);
+    height:100svh;       /* يضمن التمركز في الجوالات */
+    overflow:hidden;     /* يمنع التمرير مع التثبيت */
+  }
+
+  /* الحاوية ثابتة ومتمركزة دائماً */
+  .centered{
+    position:fixed;
+    inset:50% auto auto 50%;
+    transform:translate(-50%,-50%);
+    width:clamp(320px, 42vw, 560px); /* حجم البطاقة يتدرّج */
+  }
+
+  .card{
+    background:#fff;
+    border-radius:22px;
+    box-shadow:0 12px 40px rgba(0,0,0,.12);
+    padding:clamp(20px, 3.5vw, 36px);
+    text-align:center;
+  }
+
+  .profile{
+    width:clamp(120px, 22vw, 180px);
+    height:clamp(120px, 22vw, 180px);
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid var(--brand-2);
+    display:block;
+    margin-inline:auto;
+  }
+
+  h1{
+    margin:16px 0 6px;
+    font-size:clamp(18px, 2.2vw, 24px);
+    line-height:1.3;
+  }
+
+  .subtitle{
+    margin:0 0 18px;
+    color:#7a5b43;
+    font-size:clamp(14px, 1.7vw, 18px);
+  }
+
+  .social{
+    display:flex;
+    justify-content:center;
+    gap:clamp(10px, 2vw, 16px);
+    margin:12px 0 4px;
+  }
+  .social a{
+    font-size:clamp(22px, 3vw, 28px);
+    color:var(--brand);
+    text-decoration:none;
+    transition:transform .2s, color .2s;
+  }
+  .social a:active,
+  .social a:hover{ color:var(--brand-2); transform:translateY(-2px); }
+
+  .logo{
+    margin-top:clamp(18px, 2.8vw, 26px);
+  }
+  .logo svg{ width:clamp(56px, 8vw, 72px); height:auto; }
+  .handle{ margin-top:6px; font-size:clamp(12px, 1.6vw, 14px); }
+
+  /* دعم الشاشات الصغيرة جداً */
+  @media (max-width:360px){
+    .centered{ width:92vw; }
+  }
+</style>
 </head>
 <body>
 
-  <div class="card">
-    <img src="profile.jpg" alt="Abdullah" class="profile">
-    <h1>عبدالله حمود العنزي – أبو سند</h1>
-    <p class="subtitle">تقنية معلومات</p>
+  <div class="centered">
+    <div class="card">
+      <img src="profile.jpg" alt="Abdullah" class="profile">
 
-    <div class="social-icons">
-      <a href="https://www.tiktok.com/@k_.s4?_t=ZS-8ysTPOKP4Nt&_r=1" target="_blank"><i class="bi bi-tiktok"></i></a>
-      <a href="https://x.com/abdallah___24?t=SUsJy9DNUtFmI9nfKySW3w&s=09" target="_blank"><i class="bi bi-twitter-x"></i></a>
-      <a href="https://www.snapchat.com/add/ab-g38?share_id=Z_IOS1et5mM&locale=ar-AE" target="_blank"><i class="bi bi-snapchat"></i></a>
-    </div>
+      <h1>عبدالله حمود العنزي  </h1>
+      <div class="subtitle">تقنية معلومات</div>
 
-    <div class="logo">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-        <polygon points="50,5 70,60 30,60" fill="#a56935"/>
-        <polygon points="35,65 65,65 50,95" fill="#c49a6c"/>
-      </svg>
-      <div class="handle">ABDULLAH ALENEZI@</div>
+      <div class="social">
+        <a href="https://www.tiktok.com/@k_.s4?_t=ZS-8ysTPOKP4Nt&_r=1" target="_blank" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+        <a href="https://x.com/abdallah___24?t=SUsJy9DNUtFmI9nfKySW3w&s=09" target="_blank" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://www.snapchat.com/add/ab-g38?share_id=Z_IOS1et5mM&locale=ar-AE" target="_blank" aria-label="Snapchat"><i class="bi bi-snapchat"></i></a>
+      </div>
+
+      <div class="logo">
+        <!-- شعار بسيط -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="A Logo">
+          <polygon points="50,6 70,60 30,60" fill="#a56935"/>
+          <polygon points="35,66 65,66 50,94" fill="#c49a6c"/>
+        </svg>
+        <div class="handle">@ABDULLAH&nbsp;ALENEZI</div>
+      </div>
     </div>
   </div>
 
